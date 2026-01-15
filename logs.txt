@@ -1,0 +1,139 @@
+[API] Received file: audio.wav, content_type: audio/wav
+[API] Audio file size: 402234 bytes
+[API] Starting ASR (speech-to-text)...
+[ASR] Starting transcription (402234 bytes)
+[ASR] Temp file created: C:\Users\kow12\AppData\Local\Temp\tmp8hrimhwm.wav
+[ASR] Transcription complete: 'What is the square root of 24 plus 5?'
+[ASR] Temp file cleaned up
+[API] ASR result: 'What is the square root of 24 plus 5?'
+[API] Starting LLM (response generation)...
+[ConversationManager] Added user message (total: 9 messages)
+[LLM-FUNC] Constructed prompt from 9 messages
+[LLM-FUNC] Prompt length: 2549 chars
+[LLM-FUNC] Raw LLM output: '{"function": "calculate", "arguments": {"expression": "sqrt(24 + 5)"}}'
+[ROUTER] Routing LLM output (70 chars)
+[ROUTER] Output preview: {"function": "calculate", "arguments": {"expression": "sqrt(24 + 5)"}}...
+[ROUTER] Detected function call
+[ROUTER] Extracted function call: calculate({'expression': 'sqrt(24 + 5)'})
+[ROUTER] Executing calculate with args: {'expression': 'sqrt(24 + 5)'}
+[TOOLS] Calculating: 'sqrt(24 + 5)'
+[TOOLS] Calculation result: 5.385164807134504
+[ROUTER] Function execution successful
+[LLM-FUNC] Function was called, result: 'The result is: 5.385164807134504'
+[ConversationManager] Added assistant message (total: 10 messages)
+[API] LLM result: 'The result is: 5.385164807134504'
+[API] Starting TTS (text-to-speech)...
+[TTS] Starting synthesis: 'The result is: 5.385164807134504'
+[TTS] Output path: C:\Users\kow12\AppData\Local\Temp\tmpw4ppb5wq.wav
+[TTS] Creating fresh engine for this request...
+[TTS] Saving to file...
+[TTS] Running synthesis...
+[TTS] Stopping engine...
+[TTS] Synthesis complete: C:\Users\kow12\AppData\Local\Temp\tmpw4ppb5wq.wav (315286 bytes)
+[API] TTS result: C:\Users\kow12\AppData\Local\Temp\tmpw4ppb5wq.wav
+[API] Returning audio response
+============================================================
+
+INFO:     127.0.0.1:56783 - "POST /chat/ HTTP/1.1" 200 OK
+[API] /history endpoint called - returning 10 messages
+INFO:     127.0.0.1:56792 - "GET /history HTTP/1.1" 200 OK
+
+============================================================
+[API] /chat/ endpoint called
+============================================================
+[API] Received file: audio.wav, content_type: audio/wav
+[API] Audio file size: 291104 bytes
+[API] Starting ASR (speech-to-text)...
+[ASR] Starting transcription (291104 bytes)
+[ASR] Temp file created: C:\Users\kow12\AppData\Local\Temp\tmpy_azdneb.wav
+[ASR] Transcription complete: 'What is the capital of Canada?'
+[ASR] Temp file cleaned up
+[API] ASR result: 'What is the capital of Canada?'
+[API] Starting LLM (response generation)...
+[ConversationManager] Added user message (total: 11 messages)
+[ConversationManager] Trimmed history from 11 to 10 messages (keeping last 5 turns)
+[LLM-FUNC] Constructed prompt from 10 messages
+[LLM-FUNC] Prompt length: 2586 chars
+[LLM-FUNC] Raw LLM output: 'The capital of Canada is Ottawa.'
+[ROUTER] Routing LLM output (32 chars)
+[ROUTER] Output preview: The capital of Canada is Ottawa....
+[ROUTER] Not a function call, returning original text
+[LLM-FUNC] No function call, using original response
+[ConversationManager] Added assistant message (total: 11 messages)
+[ConversationManager] Trimmed history from 11 to 10 messages (keeping last 5 turns)
+[API] LLM result: 'The capital of Canada is Ottawa.'
+[API] Starting TTS (text-to-speech)...
+[TTS] Starting synthesis: 'The capital of Canada is Ottawa.'
+[TTS] Output path: C:\Users\kow12\AppData\Local\Temp\tmpvdcfotx_.wav
+[TTS] Creating fresh engine for this request...
+[TTS] Saving to file...
+[TTS] Running synthesis...
+[TTS] Stopping engine...
+[TTS] Synthesis complete: C:\Users\kow12\AppData\Local\Temp\tmpvdcfotx_.wav (117972 bytes)
+[API] TTS result: C:\Users\kow12\AppData\Local\Temp\tmpvdcfotx_.wav
+[API] Returning audio response
+============================================================
+
+INFO:     127.0.0.1:56806 - "POST /chat/ HTTP/1.1" 200 OK
+[API] /history endpoint called - returning 10 messages
+INFO:     127.0.0.1:56814 - "GET /history HTTP/1.1" 200 OK
+
+============================================================
+[API] /chat/ endpoint called
+============================================================
+[API] Received file: audio.wav, content_type: audio/wav
+[API] Audio file size: 396942 bytes
+[API] Starting ASR (speech-to-text)...
+[ASR] Starting transcription (396942 bytes)
+[ASR] Temp file created: C:\Users\kow12\AppData\Local\Temp\tmp7b7eyt8w.wav
+[ASR] Transcription complete: 'Give me documents related to quantum computing.'
+[ASR] Temp file cleaned up
+[API] ASR result: 'Give me documents related to quantum computing.'
+[API] Starting LLM (response generation)...
+[ConversationManager] Added user message (total: 11 messages)
+[ConversationManager] Trimmed history from 11 to 10 messages (keeping last 5 turns)
+[LLM-FUNC] Constructed prompt from 10 messages
+[LLM-FUNC] Prompt length: 2603 chars
+[LLM-FUNC] Raw LLM output: '{
+    "function": "search_arxiv",
+    "arguments": {"query": "quantum computing"}
+}'
+[ROUTER] Routing LLM output (83 chars)
+[ROUTER] Output preview: {
+    "function": "search_arxiv",
+    "arguments": {"query": "quantum computing"}
+}...
+[ROUTER] Detected function call
+[ROUTER] Extracted function call: search_arxiv({'query': 'quantum computing'})
+[ROUTER] Executing search_arxiv with args: {'query': 'quantum computing'}
+[TOOLS] Searching arXiv for: 'quantum computing'
+[TOOLS] arXiv search successful: 3 results
+[ROUTER] Function execution successful
+[LLM-FUNC] Function was called, result: 'Found 3 papers on arXiv:
+
+1. Tierkreis: A Dataflow Framework for Hybrid Quantum-Classical Computing
+...'
+[ConversationManager] Added assistant message (total: 11 messages)
+[ConversationManager] Trimmed history from 11 to 10 messages (keeping last 5 turns)
+[API] LLM result: 'Found 3 papers on arXiv:
+
+1. Tierkreis: A Dataflow Framework for Hybrid Quantum-Classical Computing
+   Summary: We present Tierkreis, a higher-order dataflow graph program representation and runtime designed for compositional, quantum-classical hybrid algorithms...
+
+2. Quantum Computing: Vision and Challenges
+   Summary: The recent development of quantum computing, which uses entanglement, superposition, and other quantum fundamental concepts, can provide substantial p...
+
+3. Entangling Disciplines: Causality, Entropy and Time-Travel Paradoxes on a Quantum Computer
+   Summary: Merging disciplines has led to incredible learnings and breakthroughs throughout history, including the discovery of quantum computing: a cross betwee...'
+[API] Starting TTS (text-to-speech)...
+[TTS] Starting synthesis: 'Found 3 papers on arXiv:
+
+[TTS] Stopping engine...
+[TTS] Synthesis complete: C:\Users\kow12\AppData\Local\Temp\tmplwvxsb3j.wav (2336440 bytes)
+[API] TTS result: C:\Users\kow12\AppData\Local\Temp\tmplwvxsb3j.wav
+[API] Returning audio response
+============================================================
+
+INFO:     127.0.0.1:56826 - "POST /chat/ HTTP/1.1" 200 OK
+[API] /history endpoint called - returning 10 messages
+INFO:     127.0.0.1:56840 - "GET /history HTTP/1.1" 200 OK
